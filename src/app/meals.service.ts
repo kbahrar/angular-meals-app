@@ -14,6 +14,12 @@ export class MealsService {
   constructor(private http: HttpClient) { }
 
   getRandomMeal(): Observable<Meals> {
-    return this.http.get<Meals>(this.URL + 'random.php');
+    const url = this.URL + 'random.php';
+    return this.http.get<Meals>(url);
+  }
+
+  getCategoryMeals(name: string): Observable<Meals> {
+    const url = this.URL + 'filter.php?c=' + name;
+    return this.http.get<Meals>(url);
   }
 }

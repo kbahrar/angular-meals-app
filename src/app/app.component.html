@@ -1,11 +1,11 @@
 <nav class="toolbar">
-    <h1 class="header">Meals App 😋</h1>
+    <h1 class="header item" routerLink="/">Meals App 😋</h1>
     <div class="items">
-        <a class="item">Beef</a>
-        <a class="item">Chicken</a>
-        <a class="item">Vegetarian</a>
-        <a class="item">Dessert</a>
+        <div class="item" routerLink="/category/Beef">Beef</div>
+        <div class="item" routerLink="/category/Chicken">Chicken</div>
+        <div class="item" routerLink="/category/Vegetarian">Vegetarian</div>
+        <div class="item" routerLink="/category/Dessert">Dessert</div>
     </div>
 </nav>
 
-<app-random-meals></app-random-meals>
+<router-outlet></router-outlet>
