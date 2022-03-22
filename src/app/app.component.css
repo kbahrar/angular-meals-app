@@ -1,0 +1,39 @@
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    justify-content: space-between;
+    box-shadow: 5px 5px 20px black;
+}
+
+.toolbar .header {
+    padding: 20px;
+}
+
+.toolbar .items {
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    margin-right: 40px;
+}
+
+.item {
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    /* width: 50px; */
+    text-align: center;
+}
+
+.item:hover {
+    background-color: #579bdf;
+    color: black;
+}

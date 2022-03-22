@@ -1,0 +1,16 @@
+.feed {
+    background-color: #579bdf;
+    width: 80%;
+    margin: 110px auto 0px auto;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.feed-header {
+    text-align: center;
+    color: aliceblue;
+    font-size: xx-large;
+    font-weight: bolder;
+    background-color: #003366;
+    padding: 20px;
+    border-radius: 20px 20px 0px 0px;
+}

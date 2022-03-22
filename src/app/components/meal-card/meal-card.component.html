@@ -1,0 +1,15 @@
+<div class="feed-items">
+    <div class="feed-item" *ngFor="let meal of meals">
+        <img class="img-item" [src]="meal.strMealThumb" alt="meal img">
+        <h3 class="title">{{meal.strMeal}}</h3>
+        <div class="section-item">
+            <div>
+                <span>Category: </span>{{meal.strCategory}}
+            </div>
+            <div>
+                <span>Area: </span>{{meal.strArea}}
+            </div>
+            <div class="see-more-btn">See More</div>
+        </div>
+    </div>
+</div>
