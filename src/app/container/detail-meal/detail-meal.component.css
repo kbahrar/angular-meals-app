@@ -1,8 +1,9 @@
 .feed {
-    background-color: #579bdf;
+    background-color: #1f4974;
     width: 80%;
     margin: 130px auto 0px auto;
     border-radius: 20px 20px 0px 0px;
+    color: aliceblue;
 }
 
 .feed-header {

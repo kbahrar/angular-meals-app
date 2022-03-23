@@ -36,6 +36,19 @@ export class CategoryMealsComponent implements OnInit {
   }
 
   private getMeals(name: string): void {
-    this.mealService.getCategoryMeals(name).subscribe(data => this.meals = data.meals);
+    this.mealService.getCategoryMeals(name).subscribe(data => this.meals = this.getRandomMeals(data.meals));
+  }
+
+  private getRandomMeals(meals: Meal[]): Meal[] {
+    const newMeals = [];
+    for (let i = 0; i < 6; i++) {
+      let randomNum = this.getRandomNum(meals.length - 1);
+      newMeals.push(meals[randomNum]);
+    }
+    return newMeals;
+  }
+
+  private getRandomNum(max: number): number {
+    return Math.floor(Math.random() * max);
   }
 }

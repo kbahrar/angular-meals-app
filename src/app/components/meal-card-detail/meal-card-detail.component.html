@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="item">
+        <div class="container-header">
+            {{meal?.strMeal}}
+        </div>
+    </div>
+    <div class="item">
+        <div class="container-header">
+            Ingredients
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="item item-img">
+        <img [src]="meal?.strMealThumb" alt="meal img">
+    </div>
+    <div class="item">
+        <div class="container-ingredients">
+            <div class="ingredient-item" *ngFor="let ing of ingredients">
+                <img [src]="'https://themealdb.com/images/ingredients/' + ing.name + '.png'" alt="meal img">
+                <h4>{{ing.mesure}} {{ing.name | uppercase}} </h4>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="instructions">
+    <h2>instructions</h2>
+    <p>{{meal?.strInstructions}} </p>
+</div>

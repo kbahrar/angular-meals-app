@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Meal, Meals } from './models/meal.interface';
+import { Meals } from './models/meal.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -20,6 +20,11 @@ export class MealsService {
 
   getCategoryMeals(name: string): Observable<Meals> {
     const url = this.URL + 'filter.php?c=' + name;
+    return this.http.get<Meals>(url);
+  }
+
+  getMealById(id: number): Observable<Meals> {
+    const url = this.URL + 'lookup.php?i=' + id;
     return this.http.get<Meals>(url);
   }
 }

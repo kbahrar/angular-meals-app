@@ -1,0 +1,66 @@
+.container {
+    width: 100%;
+    display: flex;
+}
+
+.container .item {
+    text-align: center;
+    /* background-color: azure; */
+    /* border: 1px solid black; */
+}
+
+.container .item:nth-of-type(1) {
+    width: 30%;
+}
+
+.container .item:nth-of-type(2) {
+    width: 70%;
+}
+
+.container-header {
+    padding: 50px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.item-img {
+    margin-left: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container-ingredients {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.ingredient-item {
+    width: 20%;
+    margin: 2% 6%;
+    /* background-color: aqua; */
+    /* height: 50px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.ingredient-item h4 {
+    margin: 20px 0;
+}
+
+.instructions {
+    width: 100%;
+    padding: 50px 100px;
+    /* background-color: aliceblue; */
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.instructions p {
+    margin: 50px;
+}
