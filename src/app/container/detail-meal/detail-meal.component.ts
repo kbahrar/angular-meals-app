@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MealsService } from 'src/app/meals.service';
 import { Ingredients, Meal, Meals } from 'src/app/models/meal.interface';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-detail-meal',
@@ -15,7 +16,8 @@ export class DetailMealComponent implements OnInit {
 
   constructor(
     private mealService: MealsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -27,6 +29,8 @@ export class DetailMealComponent implements OnInit {
 
   private getMealById(id: number): void {
     this.mealService.getMealById(id).subscribe(data => {
+      if (data.meals === null)
+        this.location.back();
       this.meal = data.meals[0];
       this.getIngredientsMesures(data.meals[0]);
     })

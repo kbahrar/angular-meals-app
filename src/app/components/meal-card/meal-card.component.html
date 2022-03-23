@@ -9,7 +9,7 @@
             <div>
                 <span>Area: </span>{{meal.strArea}}
             </div>
-            <div class="see-more-btn">See More</div>
+            <div class="see-more-btn" [routerLink]="'/detail/' + meal.idMeal">See More</div>
         </div>
     </div>
 </div>
